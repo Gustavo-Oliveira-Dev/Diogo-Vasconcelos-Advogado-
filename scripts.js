@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 setTimeout(() => {
   window.open(
-    "https://wa.me/5584991887917?text=Enviei%20uma%20mensagem%20pelo%20site%20e%20gostaria%20de%20continuar%20o%20atendimento.",
+    "https://wa.me/5584991887917?text=Enviei%20uma%20mensagem%20pelo%20site%20e%20gostaria%20de%20continuar%20o%20atendimento",
     "_blank"
   );
 }, 1500);
