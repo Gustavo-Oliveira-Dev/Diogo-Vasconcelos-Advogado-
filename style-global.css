@@ -379,20 +379,17 @@ button:hover {
         padding: 0 10px;
     }
 
-    /* --- DENTRO DO @MEDIA (MAX-WIDTH: 768PX) --- */
-
-/* ... outros códigos ... */
-
-/* Encontre esta parte e substitua: */
-#img-capa, #diogo-gem {
-    width: 100%; /* Ocupa a largura do container pai */
-    max-width: 350px; /* Mas limita a 350px para não ficar gigante em tablets */
-    height: auto !important; /* O !important GARANTE que a proporção seja mantida */
-    margin: 20px auto; /* Centraliza */
-    border-radius: 10px;
-    display: block; /* Garante que o margin auto funcione */
-}
-
+ /* Ajuste de tamanho das fotos no celular */
+    #img-capa, #diogo-gem {
+        width: 60%; /* Ocupa pouco mais da metade da tela (antes estava 100%) */
+        max-width: 250px; /* Trava o tamanho máximo (antes estava 350px) */
+        height: auto !important; /* Mantém a proporção para não achatar */
+        
+        display: block;
+        margin: 20px auto; /* Centraliza na tela */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra suave para destacar */
+    }
 
 
 
