@@ -471,3 +471,14 @@ button:hover {
         fill: red !important; /* Ícone VERMELHO */
     }
 }
+
+@media (max-width: 768px) {
+    .menu-icon {
+        border: 2px solid #39ff14 !important; /* Borda Verde Neon */
+        background-color: rgba(255, 0, 0, 0.5) !important; /* Fundo vermelho semi-transparente */
+        width: 40px; /* Força um tamanho */
+        height: 40px;
+        display: block !important;
+        z-index: 10000; /* Força ficar na frente de tudo */
+    }
+}
