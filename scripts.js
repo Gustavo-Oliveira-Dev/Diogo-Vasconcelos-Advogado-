@@ -53,3 +53,26 @@ setTimeout(() => {
   );
 }, 1500);
 
+document.addEventListener("DOMContentLoaded", () => {
+    // ... seu código existente ...
+
+    // Lógica do Menu Sanduíche
+    const menuIcon = document.getElementById("menuIcon");
+    const menuList = document.getElementById("menuList");
+
+    if (menuIcon && menuList) {
+        // Abre/Fecha ao clicar no ícone
+        menuIcon.addEventListener("click", () => {
+            menuList.classList.toggle("ativo");
+        });
+
+        // Fecha o menu ao clicar em um link
+        const links = document.querySelectorAll("nav ul li a");
+        links.forEach(link => {
+            link.addEventListener("click", () => {
+                menuList.classList.remove("ativo");
+            });
+        });
+    }
+});
+

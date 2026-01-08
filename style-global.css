@@ -254,21 +254,42 @@ button:hover {
 
 /* --- RESPONSIVIDADE (Celulares) --- */
 @media (max-width: 768px) {
-    .areas-atuacao {
-        flex-direction: column;
+    /* --- Correção do HERO (Topo) --- */
+    #hero {
+        flex-direction: column; /* Coloca texto em cima e imagem embaixo */
+        align-items: center;
         text-align: center;
+        padding-top: 20px;
     }
 
-    .areas-atuacao img {
+    #img-capa {
+        width: 80%; /* Aumenta a imagem para ocupar mais espaço */
+        max-width: 350px; /* Limite para não ficar gigante */
+        margin-top: 20px;
+    }
+
+    #div-hero {
         width: 100%;
     }
 
-    nav ul {
-        flex-direction: column;
+    /* --- Correção do SOBRE (Foto do Diogo) --- */
+    .sobre-foto {
+        flex-direction: column; /* Foto em cima ou embaixo do título */
+        gap: 20px; /* Reduz aquele gap de 150px que estava enorme */
+        align-items: center;
+        text-align: center;
     }
 
-    h2 {
-        text-align: center;
+    #diogo-gem {
+        width: 70%; /* Imagem maior no celular */
+        max-width: 300px;
+        border-radius: 10px; /* Fica esteticamente melhor */
+    }
+
+    /* Ajustes gerais de texto no mobile */
+    p {
+        text-align: left; /* Ou justify, para leitura melhor */
+        padding: 0 10px;
     }
 }
 
@@ -286,7 +307,9 @@ button:hover {
     font-size: 30px;
     font-weight: bold;
     box-shadow: 2px 2px 3px #999;
-    z-index: 1000;
+    z-index: 9999;
+    bottom: 20px;
+    right: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -307,5 +330,51 @@ button:hover {
         bottom: 15px;
         right: 15px;
         font-size: 25px;
+    }
+}
+
+/* Estilo padrão do botão (escondido no desktop) */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    padding: 15px 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* Regras para Celular */
+@media (max-width: 768px) {
+    /* Mostra o ícone do sanduíche */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Esconde a lista de links por padrão */
+    nav ul {
+        display: none; /* Some com o menu */
+        flex-direction: column;
+        width: 100%;
+        background-color: #2c6390;
+        position: absolute;
+        top: 60px; /* Altura da barra de navegação */
+        left: 0;
+    }
+
+    /* Classe que o JavaScript vai adicionar para mostrar o menu */
+    nav ul.ativo {
+        display: flex; /* Aparece quando ativo */
+    }
+
+    nav li {
+        text-align: center;
+        width: 100%;
+        border-bottom: 1px solid #1a4d7a;
+    }
+    
+    nav a {
+        padding: 15px;
     }
 }
