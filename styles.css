@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #0b0101;
+}
+
+header {
+  background: #2A3A52;
+  color: #fff;
+  text-align: center;
+  padding: 0px 100px;
+}
+
+.logo {
+  width: 50%;
+  padding-bottom: 30px;
+}
+
+nav {
+  background: #2c6390;
+}
+
+
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: block;
+  cursor: pointer;
+  transition: background-color 0.6s ease, transform 0.6s ease;
+}
+
+nav a:hover {
+  background-color: darkblue; /* Muda a cor */
+  transform: scale(1.05); 
+}
+
+
+
+section {
+
+  padding: 100px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+
+img {
+  width: 45%;
+  border-radius: 50px;
+  padding-top: 30px;
+}
+
+
+h2 {
+  margin-bottom: 20px;
+  color: #255192;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 35px;
+}
+
+.card {
+  background: #f1f1f1;
+  padding: 20px;
+  border-left: 10px solid #2A3A52;
+  border-radius: 21px;
+  cursor: pointer;
+}
+
+.link-externo {
+  color: #0b0101;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.link-externo:hover {
+  opacity: 0.6;
+}
+
+#divorcio {
+  width: 100%;
+  height: 90%;
+}
+
+#pensao {
+  width: 100%;
+  height: 90%;
+}
+
+#guarda {
+  width: 100%;
+  height: 90%;
+}
+
+#uniao {
+  width: 100%;
+  height: 90%;
+}
+
+#partilha {
+  width: 100%;
+  height: 90%;
+}
+
+#inventario {
+  width: 100%;
+  height: 90%;
+}
+
+#mediacao {
+  width: 100%;
+  height: 90%;
+}
+
+#contrato {
+  width: 100%;
+  height: 90%;
+}
+
+#servicos ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+li {
+  font-weight: 400;
+}
+
+article {
+  margin-bottom: 20px;
+}
+
+.orientacao {
+  font-size: 20px;
+  font-weight: bold;
+  color: #255192;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #0a2a43;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #143f63;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #24ba5b;
+  color: #fff;
+  padding: 15px;
+  border-radius: 100%;
+  text-decoration: none;
+  font-weight: bold;
+  width:110px;
+  height: 60px;
+}
+
+footer {
+  background: #2C6390;
+  color:#fff
+}
+
+footer p {
+  font-size: 16px;
+  margin-left: 60px;
+  padding: 20px 0;
+}
+
+.contatos {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.insta {
+  width: 5%;
+}
+
+.face {
+  width: 4%;
+}
+
+
+
+.mapa {
+  width: 30%;
+  height: 60%;
+  padding-bottom: 30px;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Ajustes para Telas Pequenas */
+@media (max-width: 768px) {
+    /* Header e Logo */
+    header {
+        padding: 20px;
+    }
+    .logo {
+        width: 80%;
+    }
+
+    /* Menu de Navegação */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Seções (Sobre, Áreas, etc) */
+    section {
+        flex-direction: column; /* Empilha imagem e texto */
+        padding: 30px 15px;
+        text-align: center;
+    }
+
+    h2 {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* Ajuste de Imagens das Áreas de Atuação */
+    #img-divorcio, #img-pensao, #img-uniao, #img-guarda, 
+    #img-partilha, #img-inventario, #img-mediacao, #img-contrato {
+        width: 100% !important;
+        height: auto !important;
+        margin-bottom: 20px;
+    }
+
+    /* Cards na Index */
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr; /* Um card por linha */
+        gap: 20px;
+    }
+
+    /* Formulário */
+    input, textarea {
+        width: 100%;
+    }
+}

@@ -1,0 +1,311 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #0b0101;
+    background-color: #f4f4f4;
+}
+
+/* --- HEADER E NAVEGAÇÃO --- */
+header {
+    background: #2A3A52;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo {
+    width: 300px;
+    max-width: 80%;
+}
+
+
+
+nav {
+    background: #2c6390;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    background-color: #1a4d7a;
+    transform: scale(1.05);
+}
+
+/* --- SEÇÕES E TEXTOS --- */
+
+#hero {
+    display: flex;
+   
+    gap: 40px;
+
+}
+
+#hero h2 {
+    color: #255192;
+    font-size: 289x;
+    line-height: 40px;
+    text-align: justify;
+    align-items: flex-start;
+    margin: 40px 0 20px 20px;
+    text-transform: uppercase;
+}
+
+#p-hero {
+    font-size: 16px;
+    color: #0b0101;
+    line-height: 25px;
+}
+
+#img-capa {
+    width: 30%;
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h2 {
+    color: #255192;
+    margin: 20px 0 30px 20px;
+    text-transform: uppercase;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.sobre-container {
+    background-color: #ffffff;
+    padding: 80px 20px;
+}
+
+.sobre-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sobre-text h2 {
+    margin-left: 0; /* Alinhado ao texto para leitura fluida */
+    margin-bottom: 25px;
+    position: relative;
+}
+
+/* Linha decorativa embaixo do título (charme publicitário) */
+.sobre-text h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #f5a739;
+    margin-top: 10px;
+}
+
+.sobre-text .destaque {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2c6390;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.sobre-text p {
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.sobre-foto {
+    display: flex;
+    gap: 150px;
+    margin-bottom: 20px;
+}
+
+#diogo-gem {
+    width: 25%;
+
+}
+
+.selos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.selos span {
+    background: #f4f7f9;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #2A3A52;
+    border-left: 4px solid #f5a739;
+}
+
+/* --- LAYOUT DE DUAS COLUNAS (Subpáginas) --- */
+.areas-atuacao {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.areas-atuacao img {
+    width: 40%;
+    border-radius: 15px;
+    border: 5px solid #255192;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.text {
+    flex: 1;
+}
+
+/* --- GRID DE CARDS (Index) --- */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+
+
+
+/* --- FORMULÁRIO --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: auto;
+}
+
+input,
+textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button {
+    background: #2c6390;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #1a4d7a;
+}
+
+/* --- RESPONSIVIDADE (Celulares) --- */
+@media (max-width: 768px) {
+    .areas-atuacao {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .areas-atuacao img {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
+
+/* Botão Flutuante do WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    color: #FFF;
+}
+
+/* Ajuste para não sobrepor o botão no celular */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+        font-size: 25px;
+    }
+}

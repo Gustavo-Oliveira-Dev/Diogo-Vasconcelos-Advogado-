@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+
+    line-height: 1.6;
+    color: #0b0101;
+}
+
+
+header {
+    background: #2A3A52;
+    color: #fff;
+    text-align: center;
+    padding: 0px 100px;
+}
+
+.logo {
+    width: 50%;
+    padding-bottom: 30px;
+}
+
+nav {
+    background: #2c6390;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    cursor: pointer;
+    transition: background-color 0.6s ease, transform 0.6s ease;
+}
+
+nav a:hover {
+    background-color: darkblue;
+    /* Muda a cor */
+    transform: scale(1.05);
+}
+
+section {
+    display: flex;
+    gap: 50px;
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    padding-top: 10px;
+    margin-left: 150px;
+    color: #255192;
+}
+
+#img-divorcio {
+    width: 30%;
+    height: 32%;
+    border-radius: 20px;
+    border: 5px solid;
+}
+
+#img-pensao {
+    width: 30%;
+    border-radius: 20px;
+    border: 5px solid #f5a739;
+}
+
+#img-uniao {
+    width: 35%;
+    height: 50%;
+    border-radius: 20px;
+    border: 5px solid;
+}
+
+#img-guarda {
+    width: 35%;
+    height: 50%;
+    border-radius: 20px;
+    border: 5px solid;
+}
+
+#img-partilha {
+    width: 40%;
+    height: 50%;
+    border-radius: 20px;
+    border: 5px solid;
+}
+
+#img-inventario {
+    width: 40%;
+    height: 50%;
+    border-radius: 20px;
+    border: 5px solid;
+}
+
+#img-mediacao {
+    width: 40%;
+    height: 50%;
+    border-radius: 20px;
+    border: 5px solid
+}
+
+#img-contrato {
+     width: 40%;
+    height: 50%;
+    border-radius: 20px;
+    border: 5px solid
+}
+
+
+
+p {
+    padding-top: 30px;
+}
+
+/* Ajustes para Telas Pequenas */
+@media (max-width: 768px) {
+    /* Header e Logo */
+    header {
+        padding: 20px;
+    }
+    .logo {
+        width: 80%;
+    }
+
+    /* Menu de Navegação */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Seções (Sobre, Áreas, etc) */
+    section {
+        flex-direction: column; /* Empilha imagem e texto */
+        padding: 30px 15px;
+        text-align: center;
+    }
+
+    h2 {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* Ajuste de Imagens das Áreas de Atuação */
+    #img-divorcio, #img-pensao, #img-uniao, #img-guarda, 
+    #img-partilha, #img-inventario, #img-mediacao, #img-contrato {
+        width: 100% !important;
+        height: auto !important;
+        margin-bottom: 20px;
+    }
+
+    /* Cards na Index */
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr; /* Um card por linha */
+        gap: 20px;
+    }
+
+    /* Formulário */
+    input, textarea {
+        width: 100%;
+    }
+}
