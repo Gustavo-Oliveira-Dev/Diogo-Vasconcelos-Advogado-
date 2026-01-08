@@ -54,25 +54,27 @@ setTimeout(() => {
 }, 1500);
 
 document.addEventListener("DOMContentLoaded", () => {
-    // ... seu código existente ...
+    // ... outros códigos ...
 
-    // Lógica do Menu Sanduíche
     const menuIcon = document.getElementById("menuIcon");
     const menuList = document.getElementById("menuList");
 
     if (menuIcon && menuList) {
-        // Abre/Fecha ao clicar no ícone
         menuIcon.addEventListener("click", () => {
+            // Isso vai alternar a classe 'ativo' no CSS
             menuList.classList.toggle("ativo");
+            console.log("Clique no menu detectado!"); // Abra o console (F12) pra ver se aparece isso
         });
 
-        // Fecha o menu ao clicar em um link
+        // Fechar ao clicar num link
         const links = document.querySelectorAll("nav ul li a");
         links.forEach(link => {
             link.addEventListener("click", () => {
                 menuList.classList.remove("ativo");
             });
         });
+    } else {
+        console.error("Erro: Elementos do menu não encontrados no HTML.");
     }
 });
 

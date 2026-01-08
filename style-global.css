@@ -293,33 +293,32 @@ button:hover {
     }
 }
 
-/* Botão Flutuante do WhatsApp */
 .whatsapp-float {
-    position: fixed;
+    position: fixed; /* Fixa na tela, ignora a rolagem */
+    bottom: 20px;
+    right: 20px;
     width: 60px;
     height: 60px;
-    bottom: 20px;
-    right: 20px;
     background-color: #25d366;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 9999;
-    bottom: 20px;
-    right: 20px;
+    border-radius: 50%;
+    z-index: 9999; /* Garante que fique acima de tudo */
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
-    transition: transform 0.3s;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    text-decoration: none; /* Remove sublinhado se houver */
+}
+
+/* Isso corrige o ícone deformado */
+.whatsapp-float svg {
+    width: 35px; /* Tamanho fixo para o ícone */
+    height: 35px;
+    fill: white; /* Cor do ícone */
 }
 
 .whatsapp-float:hover {
     transform: scale(1.1);
-    color: #FFF;
+    background-color: #1DA851; /* Efeito visual ao passar o mouse */
 }
 
 /* Ajuste para não sobrepor o botão no celular */
@@ -347,34 +346,51 @@ button:hover {
 
 /* Regras para Celular */
 @media (max-width: 768px) {
-    /* Mostra o ícone do sanduíche */
-    .menu-icon {
-        display: block;
+    /* Garante que o container NAV tenha cor e posição */
+    nav {
+        background-color: #2c6390; /* Azul escuro */
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 10px 0; /* Um pouco de espaço */
     }
 
-    /* Esconde a lista de links por padrão */
+    /* O botão do menu */
+    .menu-icon {
+        display: block; /* Aparece no celular */
+        position: absolute;
+        right: 20px;
+        top: 15px; /* Ajuste conforme a altura da sua barra */
+        cursor: pointer;
+    }
+
+    /* A lista de links (escondida por padrão) */
     nav ul {
-        display: none; /* Some com o menu */
+        display: none; /* Escondido inicialmente */
         flex-direction: column;
         width: 100%;
-        background-color: #2c6390;
+        background-color: #2c6390; /* Fundo azul para a lista também */
         position: absolute;
-        top: 60px; /* Altura da barra de navegação */
+        top: 60px; /* Joga a lista para baixo da barra */
         left: 0;
+        padding-bottom: 20px;
     }
 
-    /* Classe que o JavaScript vai adicionar para mostrar o menu */
+    /* Classe MÁGICA que faz aparecer */
     nav ul.ativo {
-        display: flex; /* Aparece quando ativo */
+        display: flex; /* Aparece quando tem a classe .ativo */
     }
 
     nav li {
-        text-align: center;
         width: 100%;
-        border-bottom: 1px solid #1a4d7a;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Divisória suave */
     }
     
     nav a {
         padding: 15px;
+        display: block;
+        color: white; /* Garante texto branco */
     }
 }
