@@ -298,30 +298,45 @@ button:hover {
 }
 
 /* --- REGRAS PARA CELULAR --- */
+/* --- REGRAS FINAIS E CORRIGIDAS PARA CELULAR --- */
 @media (max-width: 768px) {
 
-    /* Mostra o ícone SÓ no celular */
-    .menu-icon {
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        right: 20px;
-        top: 15px;
-        width: 40px; 
-        height: 40px;
-        cursor: pointer;
-        z-index: 10001; 
+    /* 1. HERO (A parte que estava quebrando) */
+    #hero {
+        display: flex;
+        flex-direction: column; /* OBRIGATÓRIO: Coloca um embaixo do outro */
+        align-items: center; /* Centraliza tudo */
+        text-align: center;
+        padding-top: 20px;
+        width: 100%; /* Garante que não ultrapasse a tela */
     }
 
-    /* Garante que o ícone seja branco */
-    .menu-icon svg {
-        fill: white !important;
-        width: 30px;
-        height: 30px;
+    #div-hero {
+        width: 100%;
+        padding: 0 20px; /* Um pouco de respiro nas laterais do texto */
     }
 
-    /* Menu Fixo Azul */
+    /* Títulos menores no celular para não quebrar */
+    #hero h2 {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    /* 2. IMAGENS (Sua regra ajustada) */
+    /* Isso impede que a imagem estique ou fique gigante */
+    #img-capa, #diogo-gem {
+        width: 60%; /* Tamanho agradável */
+        max-width: 250px;
+        height: auto !important; /* Isso impede que ela fique "esticada" pra cima */
+        object-fit: contain; /* Garante que a foto caiba no espaço */
+        
+        display: block;
+        margin: 20px auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    /* 3. MENU E NAVEGAÇÃO (Mantendo o que já funcionava) */
     .navbar {
         background-color: #2c6390;
         position: fixed;
@@ -334,9 +349,9 @@ button:hover {
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     }
 
-    /* Lista de Links */
     .navbar ul {
         display: none;
         flex-direction: column;
@@ -365,31 +380,45 @@ button:hover {
         font-weight: bold;
     }
 
-    body { padding-top: 60px; }
-    
-    img, iframe, .mapa {
-        max-width: 100% !important;
-        height: auto;
+    /* Botão do Menu */
+    .menu-icon {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        width: 40px; 
+        height: 40px;
+        cursor: pointer;
+        z-index: 10001; 
     }
-}
 
-    /* Ajuste de Texto */
+    .menu-icon svg {
+        fill: white !important;
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Ajuste no corpo para compensar o menu fixo */
+    body { padding-top: 60px; overflow-x: hidden; }
+    
+    /* Demais ajustes */
+    .sobre-foto, .areas-atuacao {
+        flex-direction: column;
+        align-items: center;
+    }
+
     p {
-        text-align: left;
+        text-align: left; /* ou justify */
         padding: 0 10px;
     }
 
- /* Ajuste de tamanho das fotos no celular */
-    #img-capa, #diogo-gem {
-        width: 60%; /* Ocupa pouco mais da metade da tela (antes estava 100%) */
-        max-width: 250px; /* Trava o tamanho máximo (antes estava 350px) */
-        height: auto !important; /* Mantém a proporção para não achatar */
-        
-        display: block;
-        margin: 20px auto; /* Centraliza na tela */
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra suave para destacar */
+    iframe, .mapa {
+        width: 100% !important;
+        max-width: 100%;
     }
+}
 
 
 
